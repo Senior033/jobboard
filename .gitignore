@@ -32,6 +32,9 @@ Temporary Items
 
 # End of https://www.gitignore.io/api/macos
 
+data/
+log/
+
 *.~
 /src/_cache/
 /src/_tpl/default/_cache
