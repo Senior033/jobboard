@@ -1,6 +1,7 @@
 FROM php:7.4.4-fpm
 RUN apt-get update && apt-get upgrade -y \
     && apt-get install -y libpng-dev libonig-dev \
+    && docker-php-ext-install mysqli \
     && docker-php-ext-install mbstring \
     && docker-php-ext-install gd \
     && pecl install xdebug-2.9.4 \
