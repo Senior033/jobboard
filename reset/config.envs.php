@@ -3,12 +3,12 @@
 /* MAIN WEBSITE CONFIGURATION. */
 $__instance = array(
 		'protocol' => 'http://', // "http://" or "https://"
-		'prefix' => 'localhost', // main url of the app "domainname.com", without "http://" or "www"
-		'db_host' => 'mysqldb',	//change localhost only if you connect to a remote database server
-		'db_port' => '3306',
-		'db_user' => 'admin',
-		'db_password' => 'admin',
-		'db_name' => 'test',
+		'prefix' => '{DB_URL}', // main url of the app "domainname.com", without "http://" or "www"
+		'db_host' => '{DB_HOST}',	//change localhost only if you connect to a remote database server
+		'db_port' => '{DB_PORT}',
+		'db_user' => '{DB_USER}',
+		'db_password' => '{DB_PASSWORD}',
+		'db_name' => '{DB_NAME}',
 		// language to use
 		'lang_code' => 'en',
 		'plugins' => array('', '', '', '', '', ''), // list your plugins HERE, separated by comma ['plugin A', 'plugin B']
@@ -20,12 +20,12 @@ $__instance = array(
 	);
 
 /* DEFAULT TEMPLATE FOR INSTALLER
-	'prefix' => 'localhost', // main url of the app "domainname.com", without "http://" or "www"
-	'db_host' => 'mysqldb',	//change localhost only if you connect to a remote database server
-	'db_port' => '3306',
-	'db_user' => 'admin',
-	'db_password' => 'admin',
-	'db_name' => 'test',
+	'prefix' => '{DB_URL}', // main url of the app "domainname.com", without "http://" or "www"
+	'db_host' => '{DB_HOST}',	//change localhost only if you connect to a remote database server
+	'db_port' => '{DB_PORT}',
+	'db_user' => '{DB_USER}',
+	'db_password' => '{DB_PASSWORD}',
+	'db_name' => '{DB_NAME}',
 */
 
 /* ########################### CONSTANTS - DATABASE CONNECTIONS. PHP ENVIRONMENT AND URLS ################################## */
