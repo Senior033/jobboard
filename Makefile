@@ -1,6 +1,3 @@
-build:
-	@docker build -t docker-php-fpm-image ./etc/php/
-
 # Resets entire app back to uninstalled state
 clean-reset:
 	@rm -rf ./www/_cache/*
@@ -9,10 +6,13 @@ clean-reset:
 	@rm -rf ./www/sjs-admin/_tpl/_cache/*
 	@rm -rf ./data
 	@rm -rf ./log
-	@cp ./reset/config.envs.php ./www/_config/config.envs.php
+	@cp -v ./reset/config.envs.php ./www/_config/config.envs.php
 
 start:
+	@cp -nv ./reset/config.envs.php ./www/_config/config.envs.php ||:
 	@docker-compose up -d
+
+	# As specified by https://simplejobscript.com/installation-issues-fixes/
 	@chmod -R 777 ./www/_config/config.envs.php
 	@chmod -R 777 ./www/_cache
 	@chmod -R 777 ./www/_tpl/default/_cache

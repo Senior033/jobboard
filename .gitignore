@@ -37,6 +37,8 @@ data/
 log/
 
 *.~
+/www/_config/config.envs.php
 /www/_cache/*
 /www/_tpl/default/_cache/*
+/www/sjs-admin/_cache/*
 /www/sjs-admin/_tpl/_cache/*
